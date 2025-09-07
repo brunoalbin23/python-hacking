@@ -55,3 +55,33 @@ dominios.add("hotmail.com")
 
 # Comprobar
 print("yahoo.com" in dominios)  # True
+
+
+
+#Ejercicios boludos
+
+#1 Crea una lista con 5 puertos comunes y recórrela mostrando: "Probando puerto X...".
+
+lista_puertos = [21, 22, 23, 80, 443]
+for i in lista_puertos:
+    print(i)
+
+#2 Crea un diccionario con un usuario (usuario, password, rol) y muestra solo el password.
+
+dic = {
+    "usuario":"bruno23",
+    "password":"hola123",
+    "rol":"admin"
+}
+print(dic["password"])
+
+#3 Usa un conjunto para eliminar IPs duplicadas de esta lista:
+
+ips = [1, 2, 3, 4, 1, 5, 1, 3, 6, 3, 6, 4, 3]
+
+ips_no_repetidas = set()
+
+for i in ips:
+    ips_no_repetidas.add(i)
+
+print(ips_no_repetidas)

@@ -1,0 +1,4 @@
+Escaneo completado
+IP: 192.168.1.1 - Puerto 80 abierto
+IP: 192.168.1.2 - Puerto 22 abierto
+IP: 192.168.9.2 - Puerto 1 abierto

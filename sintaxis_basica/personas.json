@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "bruno",
+        "edad": 23,
+        "ciudad": "nueva palmira"
+    },
+    {
+        "id": 2,
+        "nombre": "roro",
+        "edad": 90,
+        "ciudad": "manzana"
+    },
+    {
+        "id": 3,
+        "nombre": "roberti\u00f1o",
+        "edad": 88,
+        "ciudad": "porto alegre"
+    }
+]
