@@ -214,9 +214,7 @@ def cuentas(lista_numeros):
 
 cuentas(nums)
 
-
 """
-
 
 """9999999999999999999999999999999999999999999999999999
 Pida al usuario varios productos (nombre y precio) hasta que escriba “fin”.
@@ -225,6 +223,32 @@ Cree una función que devuelva los productos más caros (precio mayor a 100) y l
 Imprima ambas listas y guárdalas en un archivo productos.txt.
 """
 
+
+"""
+def cargar_producto():
+    productos = {}
+
+    while True:
+        nombre = input("Ingrese producto: ")
+        if nombre == "fin":
+            break
+        precio = int(input("Ingrese precio: $"))
+        productos[nombre] = precio
+
+    print("----------------------------------------------------")
+    print("Lista de productos -$100 ")
+    for i,j in productos.items():
+        if j < 100:
+            print("Producto: " + i + " - $" + str(j))
+
+    print("")
+    print("Lista de productos +$100 ")
+    for i,j in productos.items():
+        if j >= 100:
+            print("Producto: " + i + " - $" + str(j))
+
+cargar_producto()
+"""
 
 """10101010100010100101010101010101010110001 DIIIIIIIIIIIIIIIIIIIIEEEEEEEEEEEEEEEES
 Crea un programa que:
@@ -236,3 +260,42 @@ Guardar todos los datos en un archivo estudiantes.json.
 Listar todos los estudiantes con su promedio y estado (aprobado/reprobado).
 Usa funciones separadas, estructuras de datos adecuadas y aplica buenas prácticas.
 """
+
+import json
+
+def registro_estudiante():
+    estudiantes = []
+    while True:
+        id = 1
+        nombre = input("Ingrese de nombre estudiante ('fin' para finalizar): ")
+        if nombre == "fin":
+            break
+        edad = input("Edad: ")
+        materia_1 = input("Materia 1: ")
+        nota_1 = input("Nota: ")
+        materia_2 = input("Materia 2: ")
+        nota_2 = input("Nota: ")
+        materia_3 = input("Materia 3: ")
+        nota_3 = input("Nota: ")
+        estudiantes.append({"nombre":nombre, "edad":edad, "materias":{materia_1:nota_1, materia_2:nota_2, materia_3:nota_3}})
+
+    print("")
+    for i in estudiantes:
+        suma = 0
+        aprobo = False
+        for x, y in i["materias"].items():
+            suma += int(y)
+        
+        if suma/3 >= 6:
+            aprobo = True
+
+        if aprobo:    
+            print("El promedio de " + i["nombre"] + " es de "+ str(suma/3)+" - APROBADO")
+        else:
+            print("El promedio de " + i["nombre"] + " es de "+ str(suma/3)+" - REPROBADO")
+
+    # Guardar en archivo JSON
+    with open("estudiantes.json", "w") as f:
+        json.dump(estudiantes, f, indent=4)  
+
+registro_estudiante()

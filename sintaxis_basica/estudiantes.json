@@ -1,0 +1,29 @@
+[
+    {
+        "nombre": "bruno",
+        "edad": "22",
+        "materias": {
+            "asd": "3",
+            "lalal": "6",
+            "akakka": "20"
+        }
+    },
+    {
+        "nombre": "maria",
+        "edad": "2",
+        "materias": {
+            "ll": "2",
+            "mamam": "4",
+            "amajaja": "3"
+        }
+    },
+    {
+        "nombre": "jajajajj",
+        "edad": "33",
+        "materias": {
+            "nico": "3",
+            "kakaka": "3",
+            "lol": "1"
+        }
+    }
+]
